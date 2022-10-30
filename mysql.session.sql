@@ -1,0 +1,1 @@
+DELETE FROM Member WHERE username = "memberA";
