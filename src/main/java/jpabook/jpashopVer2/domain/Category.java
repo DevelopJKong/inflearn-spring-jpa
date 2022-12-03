@@ -8,7 +8,6 @@ import javax.persistence.*;
 import jpabook.jpashopVer2.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
-
 @Entity
 @Getter
 @Setter
@@ -19,11 +18,10 @@ public class Category {
     private Long id;
 
     private String name;
-
+    
     @ManyToMany
     @JoinTable(name = "category_item", joinColumns = @JoinColumn(name = "category_id"), inverseJoinColumns = @JoinColumn(name = "item_id"))
     private List<Item> items = new ArrayList<>();
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parent;
