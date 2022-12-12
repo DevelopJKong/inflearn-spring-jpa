@@ -9,5 +9,7 @@ import lombok.Setter;
 public class OrderSearch {
     private String memberName;
     private OrderStatus orderStatus;
+
+
     
 }
